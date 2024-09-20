@@ -53,6 +53,16 @@ if Yestwo_stores:
     plt.tight_layout()
     plt.show()
 
+    # 리뷰 수와 평점의 상관관계 산점도
+    plt.figure(figsize=(10, 6))
+    plt.scatter(df['회원리뷰수'], df['평점'], alpha=0.6)
+    plt.xlabel('회원리뷰수')
+    plt.ylabel('평점')
+    plt.title('리뷰수와 평점의 상관관계')
+    plt.tight_layout()
+    plt.show()
+
+
     # 회원리뷰수 상위 50권 막대 그래프
     plt.figure(figsize=(12, 8))
     top_books_by_review_count = df.nlargest(50, '회원리뷰수')
